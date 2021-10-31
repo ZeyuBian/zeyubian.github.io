@@ -1,8 +1,8 @@
 # jemdoc: menu{MENU}{index.html}, nofooter  
-==Chris (Zeyu) Bian
+==Zeyu Bian 
 
 ~~~
-{}{img_left}{profile.jpg}{alt text}{255}{260}
+{}{img_left}{profile.jpg}{alt text}{260}{280}
 PhD Candidate \n 
 McGill University \n
 1020 Pine Avenue West, Montreal, QC, H3A 1A2 \n 
@@ -17,6 +17,8 @@ My research interests include
 - Dynamic Treatment Regimens 
 - Causal Inference
 - Semiparametric Statistics
+- Missing Data
+
 
 === Recent Publications 
 . Bian Z, Moodie EEM, Shortreed S, Bhatnagar SR (2021). Variable Selection in Regression-based Estimation of Dynamic Treatment Regimes. Submitted to Biometrics, in Revision. 
@@ -24,7 +26,3 @@ My research interests include
 . Bian Z, Moodie EEM, Shortreed S, Bhatnagar SR (2021). Tailoring Variable Selection and Ranking for Optimal Treatment Decision. Contributed to Handbook of Statistical Methods for Precision Medicine, edited by Cai T., Chakraborty B., Laber E., Moodie E. and van der Laan M. Chapman \& Hall/CRC Handbooks of Modern Statistical Methods.  
 \n
 
-[publications.html Full list of publications].
-\n
-
-[cv.pdf A brief cv].
