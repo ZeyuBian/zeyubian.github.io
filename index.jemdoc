@@ -19,22 +19,22 @@ Before that, I earned my PhD in Biostatistics from McGill University in 2022, su
 
 = Research
 My research interests include 
-- Statistical Reinforcement Learning
+- Reinforcement Learning
 - Dynamic Treatment Regimens 
 - Causal Inference
-- Epidemiology
+- Dynamic and Personalized Pricing
 
 
 = Publications 
 
 == Preprints
-
-
+ 
+- *Bian Z*, Qi Z, Shi C, and Wang L (2024). [https://arxiv.org/pdf/2306.08719.pdf A Tale of Two Cities: Pessimism and Opportunism in Offline Dynamic Pricing.]  \n
 
 
 == Publications/Accepted manuscripts
 
-- *Bian Z*, Shi C, Qi Z, and Wang L (2024). [https://arxiv.org/pdf/2306.08719.pdf Off-Policy Evaluation in Doubly Inhomogeneous Environments.] /*Journal of the American Statistical Association*/, in press. \n
+- *Bian Z*, Shi C, Qi Z, and Wang L (2024). [https://www.tandfonline.com/doi/full/10.1080/01621459.2024.2395593?src=  Off-policy Evaluation in Doubly Inhomogeneous Environments.] /* Journal of the American Statistical Association*/, in press. \n
 
 
 - *Bian Z*, Moodie EEM, Shortreed S, Lambert, S, Bhatnagar SR (2024). [https://academic.oup.com/jrsssc/advance-article/doi/10.1093/jrsssc/qlad096/7337330  Variable Selection for Individualized Treatment Rules with Discrete Outcomes.] /* Journal of the Royal Statistical Society, Series C (Applied Statistics)*/,  73(2), 298–313. \n
@@ -43,7 +43,7 @@ My research interests include
 
 - *Bian Z*, Moodie EEM, Shortreed S, Bhatnagar SR (2023). [https://onlinelibrary.wiley.com/doi/full/10.1111/biom.13608 Variable Selection in Regression-based Estimation of Dynamic Treatment Regimes.] /*Biometrics*/,  79(2), 988-999. \n
 
-- *Bian Z*, Moodie EEM, Shortreed S, Bhatnagar SR (2023). Tailoring Variable Selection and Ranking for Optimal Treatment Decision. Contributed to /*Handbook of Statistical Methods for Precision Medicine/*, edited by Cai T., Chakraborty B., Laber E., Moodie E. and van der Laan M. Chapman \& Hall CRC Handbooks of Modern Statistical Methods. \n  
+- *Bian Z*, Moodie EEM, Shortreed S, Bhatnagar SR (2023). [https://www.taylorfrancis.com/books/edit/10.1201/9781003216223/handbook-statistical-methods-precision-medicine-eric-laber-bibhas-chakraborty-erica-moodie-tianxi-cai-mark-van-der-laan Tailoring Variable Selection and Ranking for Optimal Treatment Decision]. Contributed to Handbook of Statistical Methods for Precision Medicine, edited by Cai T., Chakraborty B., Laber E., Moodie E. and van der Laan M. Chapman \& Hall CRC Handbooks of Modern Statistical Methods. \n  
 
 
 
