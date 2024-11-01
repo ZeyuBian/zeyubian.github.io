@@ -365,3 +365,20 @@ table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
 }
+
+table.img_right {
+    direction: rtl;
+}
+
+table.img_right ul {
+    direction: ltr;
+}
+
+
+table.img_right td{
+    padding-right: 20px;
+}
+
+
+
+

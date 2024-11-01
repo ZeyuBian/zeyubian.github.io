@@ -18,11 +18,19 @@ Before that, I earned my PhD in Biostatistics from McGill University in 2022, su
 
 
 = Research
+
+
+~~~
+{}{img_right}{RL.jpg}{alt text}{600}{290}
 My research interests include 
 - Reinforcement Learning
 - Dynamic Treatment Regimens 
 - Causal Inference
 - Dynamic and Personalized Pricing
+
+~~~
+
+
 
 
 = Publications 
@@ -43,7 +51,7 @@ My research interests include
 
 - *Bian Z*, Moodie EEM, Shortreed S, Bhatnagar SR (2023). [https://onlinelibrary.wiley.com/doi/full/10.1111/biom.13608 Variable Selection in Regression-based Estimation of Dynamic Treatment Regimes.] /*Biometrics*/,  79(2), 988-999. \n
 
-- *Bian Z*, Moodie EEM, Shortreed S, Bhatnagar SR (2023). [https://www.taylorfrancis.com/books/edit/10.1201/9781003216223/handbook-statistical-methods-precision-medicine-eric-laber-bibhas-chakraborty-erica-moodie-tianxi-cai-mark-van-der-laan Tailoring Variable Selection and Ranking for Optimal Treatment Decision]. Contributed to Handbook of Statistical Methods for Precision Medicine, edited by Cai T., Chakraborty B., Laber E., Moodie E. and van der Laan M. Chapman \& Hall CRC Handbooks of Modern Statistical Methods. \n  
+- *Bian Z*, Moodie EEM, Shortreed S, Bhatnagar SR (2023). [https://www.taylorfrancis.com/chapters/edit/10.1201/9781003216223-14/tailoring-variable-selection-ranking-optimal-treatment-decisions-zeyu-bian-erica-moodie-susan-shortreed-sylvie-lambert-sahir-bhatnagar Tailoring Variable Selection and Ranking for Optimal Treatment Decision]. Contributed to Handbook of Statistical Methods for Precision Medicine, edited by Cai T., Chakraborty B., Laber E., Moodie E. and van der Laan M. Chapman \& Hall CRC Handbooks of Modern Statistical Methods. \n  
 
 
 

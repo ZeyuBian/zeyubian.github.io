@@ -1435,18 +1435,18 @@ def procfile(f):
         elif len(g) == 2:
           codeblock(f, g)
 
-        elif len(g) >= 4 and g[1] == 'img_left':
+        elif len(g) >= 4 and g[1] in ('img_left', 'img_right'):
           # handles
-          # {}{img_left}{source}{alttext}{width}{height}{linktarget}.
+          # {}{img_x}{source}{alttext}{width}{height}{linktarget}.
           g += ['']*(7 - len(g))
-          
+         
           if g[4].isdigit():
             g[4] += 'px'
 
           if g[5].isdigit():
             g[5] += 'px'
 
-          out(f.outf, '<table class="imgtable"><tr><td>\n')
+          out(f.outf, '<table class="imgtable %s"><tr><td>\n' % g[1])
           if g[6]:
             out(f.outf, '<a href="%s">' % g[6])
           out(f.outf, '<img src="%s"' % g[2])
@@ -1460,6 +1460,8 @@ def procfile(f):
             out(f.outf, '</a>')
           out(f.outf, '&nbsp;</td>\n<td align="left">')
           imgblock = True
+
+
 
         else:
           raise JandalError("couldn't handle block", f.linenum)
