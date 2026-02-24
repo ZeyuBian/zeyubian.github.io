@@ -1,38 +1,110 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>Resources</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources — Zeyu Bian</title>
+  <meta name="description" content="Recommended textbooks and resources on dynamic treatment regimens, semiparametric statistics, and high-dimensional statistics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue-700: #1e3a5f; --blue-600: #224b8d; --blue-500: #527bbd; --blue-400: #6e9bd4;
+      --blue-100: #dce8f5; --blue-50: #f0f5fc;
+      --gray-900: #1a1a2e; --gray-700: #444; --gray-500: #777; --gray-200: #e2e6ea; --gray-100: #f4f6f8;
+      --white: #ffffff;
+      --radius-sm: 8px; --radius-md: 16px; --radius-lg: 24px;
+      --shadow-sm: 0 1px 3px rgba(30,58,95,0.06); --shadow-md: 0 4px 20px rgba(30,58,95,0.08); --shadow-lg: 0 8px 40px rgba(30,58,95,0.12);
+      --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.1rem; background: var(--gray-100); color: var(--gray-900); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    a { color: var(--blue-600); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--blue-400); }
+    .navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-200); padding: 0 24px; }
+    .navbar-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .nav-brand { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.15rem; color: var(--blue-700); letter-spacing: -0.02em; }
+    .nav-links { display: flex; gap: 8px; }
+    .nav-links a { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 0.92rem; color: var(--gray-700); padding: 6px 14px; border-radius: var(--radius-sm); transition: background var(--transition), color var(--transition); }
+    .nav-links a:hover { background: var(--blue-50); color: var(--blue-600); }
+    .nav-links a.current { background: var(--blue-600); color: var(--white); }
+    .nav-links a.current:hover { background: var(--blue-500); color: var(--white); }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger svg { display: block; }
+    .main { max-width: 1140px; margin: 0 auto; padding: 40px 24px 60px; }
+    .card { background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); padding: 36px 40px; margin-bottom: 28px; border: 1px solid rgba(0,0,0,0.04); transition: box-shadow var(--transition); }
+    .card:hover { box-shadow: var(--shadow-lg); }
+    .card h2 { font-family: 'Inter', sans-serif; font-size: 1.65rem; font-weight: 700; color: var(--blue-700); margin-bottom: 16px; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; }
+    .card h2 .icon { width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; background: var(--blue-50); border-radius: var(--radius-sm); flex-shrink: 0; }
+    .card h2 .icon svg { width: 16px; height: 16px; fill: var(--blue-500); }
+    .card h3 { font-family: 'Inter', sans-serif; font-size: 1.2rem; font-weight: 600; color: var(--blue-600); margin-top: 24px; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 2px solid var(--blue-100); }
+    .card h3:first-of-type { margin-top: 8px; }
+    .book-list { list-style: none; padding: 0; }
+    .book-item { padding: 14px 16px; border-bottom: 1px solid var(--gray-200); border-radius: var(--radius-sm); transition: background var(--transition); display: flex; align-items: baseline; gap: 12px; }
+    .book-item:last-child { border-bottom: none; }
+    .book-item:hover { background: var(--blue-50); }
+    .book-item::before { content: ''; display: inline-block; width: 6px; height: 6px; background: var(--blue-400); border-radius: 50%; flex-shrink: 0; margin-top: 8px; }
+    .book-item a { font-weight: 500; }
+    .footer { text-align: center; padding: 32px 24px; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--gray-500); border-top: 1px solid var(--gray-200); max-width: 1140px; margin: 0 auto; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 768px) {
+      .card { padding: 24px 20px; border-radius: var(--radius-md); }
+      .hamburger { display: block; }
+      .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background: var(--white); flex-direction: column; padding: 12px 20px; box-shadow: var(--shadow-md); border-top: 1px solid var(--gray-200); }
+      .nav-links.open { display: flex; }
+      .navbar-inner { position: relative; }
+    }
+  </style>
 </head>
 <body>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<td id="layout-menu">
-<div class="menu-item"><a href="index.html">Home</a></div>
-<div class="menu-item"><a href="teaching.html">Teaching</a></div>
-<div class="menu-item"><a href="resources.html" class="current">Resources</a></div>
-</td>
-<td id="layout-content">
-<div id="toptitle">
-<h1>Resources</h1>
-</div>
-<h3>Dynamic Treatment Regimens and Precision Medicine</h3>
-<p><br />
-<a href="https://link.springer.com/book/10.1007%2F978-1-4614-7428-9">Statistical Methods for Dynamic Treatment Regimes, Bibhas Chakraborty and Erica E.M. Moodie</a> <br /></p>
-<p><a href="https://epubs.siam.org/doi/book/10.1137/1.9781611974188?mobileUi=0">Adaptive Treatment Strategies in Practice: Planning Trials and Analyzing Data for Personalized Medicine, Michael R. Kosorok and Erica E.M. Moodie</a></p>
-<p><a href="https://www.routledge.com/Dynamic-Treatment-Regimes-Statistical-Methods-for-Precision-Medicine/Tsiatis-Davidian-Holloway-Laber/p/book/9781032082288">Dynamic Treatment Regimes: Statistical Methods for Precision Medicine by Anastasios A. Tsiatis, Marie Davidian, Shannon T. Holloway, Eric B. Laber</a></p>
-<h3>Semiparametric Statistics</h3>
-<p><br />
-<a href="https://link.springer.com/book/10.1007/0-387-37345-4">Semiparametric Theory and Missing Data, Anastasios A. Tsiatis</a></p>
-<h3>High Dimensional Statistics</h3>
-<p><br /><a href="https://www.taylorfrancis.com/books/mono/10.1201/b18401/statistical-learning-sparsity-trevor-hastie-robert-tibshirani-martin-wainwright">Statistical Learning with Sparsity: The Lasso and Generalizations by Trevor Hastie, Robert Tibshirani and Martin Wainwright</a><br /></p>
-<p><a href="https://www.cambridge.org/core/books/highdimensional-probability/797C466DA29743D2C8213493BD2D2102">High-Dimensional Probability, An Introduction with Applications in Data Science by Roman Vershynin</a><br /></p>
-<p><a href="https://www.cambridge.org/core/books/highdimensional-statistics/8A91ECEEC38F46DAB53E9FF8757C7A4E">High-Dimensional Statistics: A Non-Asymptotic Viewpoint by Martin J. Wainwright</a></p>
-</td>
-</tr>
-</table>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">Zeyu Bian</a>
+      <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#444" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="resources.html" class="current">Resources</a>
+      </div>
+    </div>
+  </nav>
+  <main class="main">
+    <section class="card reveal">
+      <h2>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></svg></span>
+        Resources
+      </h2>
+      <h3>Dynamic Treatment Regimens &amp; Precision Medicine</h3>
+      <ul class="book-list">
+        <li class="book-item"><a href="https://link.springer.com/book/10.1007%2F978-1-4614-7428-9">Statistical Methods for Dynamic Treatment Regimes</a> — Bibhas Chakraborty &amp; Erica E.M. Moodie</li>
+        <li class="book-item"><a href="https://epubs.siam.org/doi/book/10.1137/1.9781611974188?mobileUi=0">Adaptive Treatment Strategies in Practice</a> — Michael R. Kosorok &amp; Erica E.M. Moodie</li>
+        <li class="book-item"><a href="https://www.routledge.com/Dynamic-Treatment-Regimes-Statistical-Methods-for-Precision-Medicine/Tsiatis-Davidian-Holloway-Laber/p/book/9781032082288">Dynamic Treatment Regimes: Statistical Methods for Precision Medicine</a> — Tsiatis, Davidian, Holloway &amp; Laber</li>
+      </ul>
+      <h3>Semiparametric Statistics</h3>
+      <ul class="book-list">
+        <li class="book-item"><a href="https://link.springer.com/book/10.1007/0-387-37345-4">Semiparametric Theory and Missing Data</a> — Anastasios A. Tsiatis</li>
+      </ul>
+      <h3>High-Dimensional Statistics</h3>
+      <ul class="book-list">
+        <li class="book-item"><a href="https://www.taylorfrancis.com/books/mono/10.1201/b18401/statistical-learning-sparsity-trevor-hastie-robert-tibshirani-martin-wainwright">Statistical Learning with Sparsity: The Lasso and Generalizations</a> — Hastie, Tibshirani &amp; Wainwright</li>
+        <li class="book-item"><a href="https://www.cambridge.org/core/books/highdimensional-probability/797C466DA29743D2C8213493BD2D2102">High-Dimensional Probability</a> — Roman Vershynin</li>
+        <li class="book-item"><a href="https://www.cambridge.org/core/books/highdimensional-statistics/8A91ECEEC38F46DAB53E9FF8757C7A4E">High-Dimensional Statistics: A Non-Asymptotic Viewpoint</a> — Martin J. Wainwright</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">&copy; 2026 Zeyu Bian &middot; Department of Statistics, Florida State University</footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+  </script>
 </body>
 </html>

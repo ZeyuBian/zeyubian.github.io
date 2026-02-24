@@ -1,111 +1,502 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>Zeyu Bian </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeyu Bian — Assistant Professor, Florida State University</title>
+  <meta name="description" content="Zeyu Bian is an Assistant Professor in the Department of Statistics at Florida State University. Research interests include reinforcement learning, causal inference, dynamic treatment regimens, and personalized pricing.">
+  <meta property="og:title" content="Zeyu Bian — Florida State University">
+  <meta property="og:description" content="Assistant Professor, Department of Statistics. Research in reinforcement learning, causal inference, and dynamic pricing.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue-700: #1e3a5f;
+      --blue-600: #224b8d;
+      --blue-500: #527bbd;
+      --blue-400: #6e9bd4;
+      --blue-100: #dce8f5;
+      --blue-50: #f0f5fc;
+      --gray-900: #1a1a2e;
+      --gray-700: #444;
+      --gray-500: #777;
+      --gray-200: #e2e6ea;
+      --gray-100: #f4f6f8;
+      --white: #ffffff;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 1px 3px rgba(30,58,95,0.06);
+      --shadow-md: 0 4px 20px rgba(30,58,95,0.08);
+      --shadow-lg: 0 8px 40px rgba(30,58,95,0.12);
+      --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.1rem;
+      background: var(--gray-100);
+      color: var(--gray-900);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--blue-600); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--blue-400); }
+
+    /* ── Sticky Nav ── */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0 24px;
+    }
+    .navbar-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .nav-brand {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--blue-700);
+      letter-spacing: -0.02em;
+    }
+    .nav-links { display: flex; gap: 8px; }
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.92rem;
+      color: var(--gray-700);
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      transition: background var(--transition), color var(--transition);
+    }
+    .nav-links a:hover { background: var(--blue-50); color: var(--blue-600); }
+    .nav-links a.current { background: var(--blue-600); color: var(--white); }
+    .nav-links a.current:hover { background: var(--blue-500); color: var(--white); }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger svg { display: block; }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-700) 100%);
+      padding: 72px 24px 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(110,155,212,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 24px;
+      position: relative;
+    }
+    .hero-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.25);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      flex-shrink: 0;
+    }
+    .hero-info { flex: 1; }
+    .hero-info h1 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .hero-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--white);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 7px 16px;
+      border-radius: 999px;
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .hero-links a:hover {
+      background: rgba(255,255,255,0.22);
+      border-color: rgba(255,255,255,0.4);
+      color: var(--white);
+    }
+    .hero-links svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    /* ── Main Content ── */
+    .main { max-width: 1140px; margin: 0 auto; padding: 40px 24px 60px; }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      padding: 36px 40px;
+      margin-bottom: 28px;
+      border: 1px solid rgba(0,0,0,0.04);
+      transition: box-shadow var(--transition);
+    }
+    .card:hover { box-shadow: var(--shadow-lg); }
+
+    .card h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--blue-700);
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card h2 .icon {
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue-50);
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+    }
+    .card h2 .icon svg { width: 16px; height: 16px; fill: var(--blue-500); }
+
+    .card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--blue-600);
+      margin-top: 24px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--blue-100);
+    }
+    .card h3:first-of-type { margin-top: 8px; }
+
+    .card p { margin-bottom: 12px; color: var(--gray-700); }
+
+    /* ── Research Tags ── */
+    .research-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+    .research-img {
+      width: 100%;
+      max-width: 820px;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 6px 32px rgba(30,58,95,0.14);
+      border: 1px solid var(--gray-200);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .research-img:hover {
+      transform: scale(1.015);
+      box-shadow: 0 12px 48px rgba(30,58,95,0.18);
+    }
+    .research-content { width: 100%; }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--blue-600);
+      background: var(--blue-50);
+      border: 1px solid var(--blue-100);
+      padding: 6px 16px;
+      border-radius: 999px;
+      transition: background var(--transition), color var(--transition);
+    }
+    .tag:hover {
+      background: var(--blue-600);
+      color: var(--white);
+    }
+
+    /* ── Publication List ── */
+    .pub-list { list-style: none; padding: 0; }
+    .pub-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--gray-200);
+      line-height: 1.65;
+      transition: background var(--transition);
+    }
+    .pub-item:last-child { border-bottom: none; }
+    .pub-item:hover { background: var(--blue-50); margin: 0 -16px; padding: 16px 16px; border-radius: var(--radius-sm); }
+    .pub-year {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--blue-500);
+      background: var(--blue-50);
+      padding: 2px 10px;
+      border-radius: 999px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .pub-title { font-weight: 600; }
+    .pub-title a { color: #0097a7; }
+    .pub-title a:hover { color: #00bcd4; text-decoration: underline; }
+    .pub-venue { font-style: italic; color: var(--blue-700); font-weight: 600; }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      border-top: 1px solid var(--gray-200);
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    /* ── Scroll-reveal animation ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .hero { padding: 48px 20px 40px; }
+      .hero-inner { flex-direction: column; text-align: center; gap: 24px; }
+      .hero-info h1 { font-size: 1.8rem; }
+      .hero-links { justify-content: center; }
+      .card { padding: 24px 20px; border-radius: var(--radius-md); }
+      .tags { justify-content: center; }
+
+      .hamburger { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 12px 20px;
+        box-shadow: var(--shadow-md);
+        border-top: 1px solid var(--gray-200);
+      }
+      .nav-links.open { display: flex; }
+      .navbar-inner { position: relative; }
+    }
+  </style>
 </head>
 <body>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<td id="layout-menu">
-<div class="menu-item"><a href="index.html" class="current">Home</a></div>
-<div class="menu-item"><a href="teaching.html">Teaching</a></div>
-<div class="menu-item"><a href="resources.html">Resources</a></div>
-</td>
-<td id="layout-content">
-<div id="toptitle">
-<h1>Zeyu Bian </h1>
-</div>
-<table class="imgtable img_left"><tr><td>
-<img src="Zeyu.jpg" alt="alt text" width="350px" height="246px" />&nbsp;</td>
-<td align="left"><p>Zeyu Bian, PhD <br /><br />
-  Florida State University <br /><br />
-Email: zeyu.bian@fsu.edu </p>
-</td></tr></table>
-<h1>About</h1>
-<p> I am an Assistant Professor in the Department of Statistics at Florida State University. <br /><br />
-  I earned my PhD in Biostatistics from McGill University in 2022, supervised by <a href="https://www.ericamoodie.com/">Dr. Erica Moodie</a> and <a href="https://sahirbhatnagar.com/">Dr. Sahir Bhatnagar</a>.<br /><br /></p>
-<h1>Research</h1>
-<table class="imgtable img_right"><tr><td>
-<img src="RL.jpg" alt="alt text" width="800px" height="400px" />&nbsp;</td>
-<td align="left"><p>My research interests include </p>
-<ul>
-<li><p>Reinforcement Learning</p>
-</li>
-<li><p>Dynamic Treatment Regimens </p>
-</li>
-<li><p>Causal Inference</p>
-</li>
-<li><p>Dynamic and Personalized Pricing</p>
-</li>
-</ul>
-</td></tr></table>
-<h1>Publications </h1>
-<h2>Preprints</h2>
 
-<ul>
-  <li>
-    <p>
-      <b>Bian Z</b>, Wang L, Shi C, and Qi Z (2026).
-      <a href="https://arxiv.org/abs/2601.19186">
-        Double Fairness Policy Learning: Integrating Action Fairness and Outcome Fairness in Decision-making.
-      </a>
-      <br />
-    </p>
-  </li>
-</ul>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-brand">Zeyu Bian</a>
+      <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#444" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="nav-links">
+        <a href="index.html" class="current">Home</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="resources.html">Resources</a>
+      </div>
+    </div>
+  </nav>
 
-<ul>
-  <li>
-    <p>
-      <b>Bian<sup>†</sup> Z</b>, Biggs<sup>†</sup> M, Gao<sup>†</sup> R, and Qi<sup>†</sup> Z (2026).
-      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5999814">
-        Beyond Demand Estimation: Consumer Surplus Evaluation via Cumulative Propensity Weights.
-      </a>
-      <br />
-    </p>
-  </li>
-</ul>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="./Zeyu.jpg" alt="Zeyu Bian" class="hero-img">
+      <div class="hero-info">
+        <h1>Zeyu Bian</h1>
+        <p class="hero-subtitle">Assistant Professor, Department of Statistics<br>Florida State University</p>
+        <div class="hero-links">
+          <a href="mailto:zeyu.bian@fsu.edu">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            zeyu.bian@fsu.edu
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<ul>
-  <li>
-    <p>
-      <b>Bian Z</b>, Qi Z, Shi C, and Wang L (2024).
-      <a href="https://arxiv.org/abs/2411.08126">
-        A Tale of Two Cities: Pessimism and Opportunism in Offline Dynamic Pricing.
-      </a>
-      <br />
-    </p>
-  </li>
-</ul>
+  <!-- Main Content -->
+  <main class="main">
 
+    <!-- About -->
+    <section class="card reveal">
+      <h2>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></span>
+        About
+      </h2>
+      <p>I am an Assistant Professor in the <a href="https://stat.fsu.edu/" target="_blank" rel="noopener">Department of Statistics</a> at Florida State University.</p>
+      <p>I earned my PhD in Biostatistics from McGill University in 2022, supervised by <a href="https://www.ericamoodie.com/">Dr. Erica Moodie</a> and <a href="https://sahirbhatnagar.com/">Dr. Sahir Bhatnagar</a>.</p>
+    </section>
 
-<h2>Publications/Accepted manuscripts</h2>
-<ul>
-<li><p><b>Bian Z</b>, Shi C, Qi Z, and Wang L (2025). <a href="https://www.tandfonline.com/doi/full/10.1080/01621459.2024.2395593?src=">Off-policy Evaluation in Doubly Inhomogeneous Environments.</a> <i><b> Journal of the American Statistical Association</b></i>, 120 (550), 1102-1114. <br /></p>
-</li>
-</ul>
-<ul>
-<li><p><b>Bian Z</b>, Moodie EEM, Shortreed S, Lambert, S, Bhatnagar SR (2024). <a href="https://academic.oup.com/jrsssc/advance-article/doi/10.1093/jrsssc/qlad096/7337330">Variable Selection for Individualized Treatment Rules with Discrete Outcomes.</a> <i><b> Journal of the Royal Statistical Society, Series C (Applied Statistics)</b></i>,  73(2), 298–313. <br /></p>
-</li>
-</ul>
-<ul>
-<li><p>Moodie EEM, <b>Bian Z</b>, Coulombe J, Lian Y, Yang Y, and Shortreed S (2023). <a href="https://academic.oup.com/biostatistics/advance-article-abstract/doi/10.1093/biostatistics/kxad022/7259205?redirectedFrom=fulltext">Variable selection in high dimensions for discrete-outcome individualized treatment rules: A case study in reducing severity of depression symptoms.</a> <i><b>Biostatistics</b></i>, 25(3), 633–647. <br /></p>
-</li>
-</ul>
-<ul>
-<li><p><b>Bian Z</b>, Moodie EEM, Shortreed S, Bhatnagar SR (2023). <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/biom.13608">Variable Selection in Regression-based Estimation of Dynamic Treatment Regimes.</a> <i><b>Biometrics</b></i>,  79(2), 988-999. <br /></p>
-</li>
-</ul>
-<ul>
-<li><p><b>Bian Z</b>, Moodie EEM, Shortreed S, Bhatnagar SR (2023). <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003216223-14/tailoring-variable-selection-ranking-optimal-treatment-decisions-zeyu-bian-erica-moodie-susan-shortreed-sylvie-lambert-sahir-bhatnagar">Tailoring Variable Selection and Ranking for Optimal Treatment Decision</a>. Contributed to Handbook of Statistical Methods for Precision Medicine, edited by Cai T., Chakraborty B., Laber E., Moodie E. and van der Laan M. Chapman & Hall CRC Handbooks of Modern Statistical Methods. <br />  </p>
-</li>
-</ul>
-</td>
-</tr>
-</table>
+    <!-- Research -->
+    <section class="card reveal">
+      <h2>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/></svg></span>
+        Research
+      </h2>
+      <p>My research interests include:</p>
+      <div class="tags">
+        <span class="tag">Reinforcement Learning</span>
+        <span class="tag">Dynamic Treatment Regimens</span>
+        <span class="tag">Causal Inference</span>
+        <span class="tag">Dynamic &amp; Personalized Pricing</span>
+      </div>
+      <img src="./RL.jpg" alt="Research illustration" class="research-img" style="margin-top: 24px; display: block; margin-left: auto; margin-right: auto; max-width: 80%;">
+    </section>
+
+    <!-- Publications -->
+    <section class="card reveal">
+      <h2>
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg></span>
+        Publications
+      </h2>
+
+      <h3>Preprints</h3>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <span class="pub-year">2026</span>
+          <b>Bian Z</b>, Wang L, Shi C, and Qi Z.
+          <span class="pub-title"><a href="https://arxiv.org/abs/2601.19186">Double Fairness Policy Learning: Integrating Action Fairness and Outcome Fairness in Decision-making.</a></span>
+        </li>
+        <li class="pub-item">
+          <span class="pub-year">2026</span>
+          <b>Bian<sup>&dagger;</sup> Z</b>, Biggs<sup>&dagger;</sup> M, Gao<sup>&dagger;</sup> R, and Qi<sup>&dagger;</sup> Z.
+          <span class="pub-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5999814">Beyond Demand Estimation: Consumer Surplus Evaluation via Cumulative Propensity Weights.</a></span>
+        </li>
+        <li class="pub-item">
+          <span class="pub-year">2024</span>
+          <b>Bian Z</b>, Qi Z, Shi C, and Wang L.
+          <span class="pub-title"><a href="https://arxiv.org/abs/2411.08126">A Tale of Two Cities: Pessimism and Opportunism in Offline Dynamic Pricing.</a></span>
+        </li>
+      </ul>
+
+      <h3>Published &amp; Accepted</h3>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <span class="pub-year">2025</span>
+          <b>Bian Z</b>, Shi C, Qi Z, and Wang L.
+          <span class="pub-title"><a href="https://www.tandfonline.com/doi/full/10.1080/01621459.2024.2395593?src=">Off-policy Evaluation in Doubly Inhomogeneous Environments.</a></span>
+          <span class="pub-venue">Journal of the American Statistical Association</span>, 120(550), 1102–1114.
+        </li>
+        <li class="pub-item">
+          <span class="pub-year">2024</span>
+          <b>Bian Z</b>, Moodie EEM, Shortreed S, Lambert S, Bhatnagar SR.
+          <span class="pub-title"><a href="https://academic.oup.com/jrsssc/advance-article/doi/10.1093/jrsssc/qlad096/7337330">Variable Selection for Individualized Treatment Rules with Discrete Outcomes.</a></span>
+          <span class="pub-venue">Journal of the Royal Statistical Society, Series C</span>, 73(2), 298–313.
+        </li>
+        <li class="pub-item">
+          <span class="pub-year">2023</span>
+          Moodie EEM, <b>Bian Z</b>, Coulombe J, Lian Y, Yang Y, and Shortreed S.
+          <span class="pub-title"><a href="https://academic.oup.com/biostatistics/advance-article-abstract/doi/10.1093/biostatistics/kxad022/7259205?redirectedFrom=fulltext">Variable selection in high dimensions for discrete-outcome individualized treatment rules.</a></span>
+          <span class="pub-venue">Biostatistics</span>, 25(3), 633–647.
+        </li>
+        <li class="pub-item">
+          <span class="pub-year">2023</span>
+          <b>Bian Z</b>, Moodie EEM, Shortreed S, Bhatnagar SR.
+          <span class="pub-title"><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/biom.13608">Variable Selection in Regression-based Estimation of Dynamic Treatment Regimes.</a></span>
+          <span class="pub-venue">Biometrics</span>, 79(2), 988–999.
+        </li>
+        <li class="pub-item">
+          <span class="pub-year">2023</span>
+          <b>Bian Z</b>, Moodie EEM, Shortreed S, Bhatnagar SR.
+          <span class="pub-title"><a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003216223-14/tailoring-variable-selection-ranking-optimal-treatment-decisions-zeyu-bian-erica-moodie-susan-shortreed-sylvie-lambert-sahir-bhatnagar">Tailoring Variable Selection and Ranking for Optimal Treatment Decision.</a></span>
+          <span class="pub-venue">Handbook of Statistical Methods for Precision Medicine</span>. Chapman &amp; Hall/CRC.
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2026 Zeyu Bian &middot; Department of Statistics, Florida State University
+  </footer>
+
+  <!-- Scroll-reveal Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+  </script>
 </body>
 </html>
